@@ -1,0 +1,29 @@
+@import '../../theme.scss';
+
+.container {
+    width: 100%;
+    max-width: $siteWidth;
+    margin: 0 auto;
+    padding: 0 $spacing4;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    &.lg {
+        max-width: $siteWidth;
+    }
+
+    &.pg {
+        max-width: calc(#{$siteWidth} * 3 / 4);
+    }
+
+    &.md {
+        max-width: calc(#{$siteWidth} * 2 / 3);
+    }
+
+    &.sm {
+        max-width: calc(#{$siteWidth} / 2);
+    }
+}

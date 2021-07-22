@@ -1,0 +1,122 @@
+@import '../../theme.scss';
+
+.bunny-button {
+    width: 100%;
+    height: 42px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: $borderRadius;
+    color: $grey400;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-align: center;
+    padding: 0 $spacing4;
+    background-color: $grey900;
+    box-shadow: none;
+
+    > .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        > .subtext {
+            font-size: 11px;
+            font-weight: 700;
+        }
+    }
+
+    &:hover {
+        background-color: $grey700;
+    }
+
+    &.primary {
+        color: $white;
+        background-color: $bunnyDark;
+    }
+
+    &.secondary {
+        color: $grey900;
+        background-color: $grey100;
+
+        &:hover {
+            background-color: $grey200;
+        }
+    }
+
+    &.transparent {
+        color: $white;
+        background-color: transparent;
+
+        &:hover {
+            background-color: $grey900;
+        }
+    }
+
+    &.check-on {
+        color: $mint;
+
+        &:hover {
+            background-color: $grey900;
+        }
+    }
+
+    &.check-off {
+        color: $grey900;
+        background-color: $grey100;
+
+        &:hover {
+            background-color: $grey200;
+        }
+    }
+
+    &.group {
+        height: 24px;
+        padding: 0;
+        background-color: transparent;
+        color: $grey400;
+
+        &:hover {
+            background-color: transparent;
+            color: $grey200;
+        }
+
+        &.active {
+            color: $bunnyDark;
+        }
+
+        @media (max-width: $mobileWidth) {
+            padding: 0;
+        }
+    }
+
+    &.disabled {
+        pointer-events: none;
+    }
+
+    &.collapsed {
+        width: fit-content;
+        height: 36px;
+        justify-content: center;
+        padding: 0 $spacing3;
+    }
+
+    &.no-wrap {
+        white-space: nowrap;
+    }
+
+    @media (max-width: $mobileWidth) {
+        padding: 0 $spacing3;
+    }
+}
+
+.bunny-button-link {
+    display: flex;
+    flex: 1;
+    color: inherit;
+    text-decoration: none;
+}

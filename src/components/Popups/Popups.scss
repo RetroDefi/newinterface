@@ -1,0 +1,73 @@
+@import '../../theme';
+
+.popups-wrapper {
+    position: fixed;
+    width: 100%;
+    max-width: 280px !important;
+    top: 64px;
+    left: unset;
+    right: calc((100vw - 1152px) / 2);
+    z-index: 900;
+
+    @media (max-width: $mobileWidth) {
+        max-width: unset !important;
+        width: calc(100vw - 48px);
+        right: 24px;
+        left: 24px;
+    }
+}
+
+.popup {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    background-color: $purple;
+    padding: $spacing3;
+    border-radius: $borderRadius;
+    overflow: hidden;
+
+    > .popup-close {
+        position: absolute;
+        right: $spacing3;
+        top: $spacing3;
+        color: white;
+    }
+
+    > .popup-fader {
+        position: absolute;
+        height: 2px;
+        min-height: 2px;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: $bunnyDark;
+    }
+}
+
+.tx-popup {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    > .tx-popup-icon {
+        margin-right: $spacing3;
+    }
+
+    > .tx-popup-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        color: $grey200;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.8px;
+
+        > .hash {
+            color: $grey200;
+            font-size: 14px;
+            font-weight: 700;
+        }
+    }
+}

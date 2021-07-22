@@ -1,0 +1,133 @@
+@import '../../theme.scss';
+
+.topbar {
+    width: 100%;
+    max-width: $siteWidth;
+    height: $topBarSize;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    > .logo-wrapper {
+        width: 240px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: $mobileWidth) {
+            width: auto;
+        }
+    }
+
+    > .nav-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex: 1;
+
+        @media (max-width: $mobileWidth) {
+            display: none;
+        }
+    }
+
+    > .account-wrapper {
+        //width: 240px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        @media (max-width: $mobileWidth) {
+            display: none;
+        }
+    }
+
+    > .menu-wrapper {
+        display: none;
+        background: none;
+        border: 0;
+        margin: 0;
+        outline: 0;
+        padding: 0;
+
+        @media (max-width: $mobileWidth) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.topbar-nav {
+    display: flex;
+    align-items: center;
+
+    > .item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $grey400;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        padding-left: $spacing4;
+        padding-right: $spacing4;
+        text-decoration: none;
+
+        > .decoration {
+            width: 120%;
+            height: 1px;
+            background-color: transparent;
+            margin-top: 5px;
+        }
+
+        &:hover {
+            color: $grey200;
+        }
+
+        &.active {
+            color: $bunnyDark;
+        }
+
+        @media (max-width: $mobileWidth) {
+            padding-left: $spacing2;
+            padding-right: $spacing2;
+        }
+    }
+}
+
+.topbar-bunny-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: $mint;
+    text-shadow: 0 0 12px $mint;
+    margin-right: $spacing3;
+
+    > img {
+        width: auto;
+        height: 26px;
+    }
+}
+
+.topbar-menu {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 35px 50px 45px;
+
+    > .close {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+        align-self: flex-end;
+    }
+}

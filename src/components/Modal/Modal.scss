@@ -1,0 +1,49 @@
+@import '../../theme.scss';
+
+@keyframes bunny-modal-mobile {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.bunny-modal-wrapper {
+    width: 100%;
+    max-width: 610px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    @media (max-width: $mobileWidth) {
+        flex: 1;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        max-height: calc(100% - #{$spacing4});
+        animation: bunny-modal-mobile 0.3s forwards ease-out;
+        max-width: unset;
+    }
+
+    &.sm {
+        max-width: 420px;
+    }
+}
+
+.bunny-modal {
+    width: 100%;
+    min-height: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: $borderRadius;
+    background: $card;
+
+    @media (max-width: $mobileWidth) {
+        border-radius: $borderRadius $borderRadius 0 0;
+    }
+}

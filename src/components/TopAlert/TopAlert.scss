@@ -1,0 +1,42 @@
+@import '../../theme';
+
+.top-alert {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    height: $noticeHeight;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: white;
+    padding: 0 15px;
+    background-color: $bunnyDark;
+
+    &.show {
+        height: $noticeHeight;
+        opacity: 1;
+        transition: height 0.5s, opacity 0.5s;
+    }
+
+    &.hide {
+        height: 0;
+        opacity: 0;
+        transition: height 0.5s, opacity 0.5s;
+    }
+
+    .message {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 600;
+
+        > .external-icon {
+            margin-left: $spacing1;
+        }
+    }
+}

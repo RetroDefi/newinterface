@@ -1,0 +1,110 @@
+@import '../../theme.scss';
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - #{$topBarSize} - #{$footerSize});
+
+    @media (max-width: $mobileWidth) {
+        min-height: unset;
+    }
+}
+
+.page-header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 0 30px;
+    margin: 0 auto;
+
+    > .icon {
+        width: auto;
+        height: 80px;
+    }
+
+    > .title {
+        margin: 15px 0;
+        padding: 0;
+        font-size: 20px;
+        color: $white;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    > .subtitle {
+        width: 100%;
+        font-size: 14px;
+        font-weight: 700;
+        color: $grey400;
+        text-align: center;
+
+        .highlight {
+            font-size: 24px;
+            font-weight: unset;
+            color: $mint;
+            text-shadow: 0 0 12px $mint;
+        }
+
+        .highlight-text {
+            color: $mint;
+            text-shadow: 0 0 12px $mint;
+        }
+    }
+}
+
+.page-content {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: $spacing4;
+}
+
+.page-footer {
+    width: 100%;
+    min-height: $footerSize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-footer-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    > .item {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: $grey500;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        padding-left: $spacing4;
+        padding-right: $spacing4;
+        text-decoration: none;
+
+        &:hover {
+            color: $grey400;
+        }
+
+        @media (max-width: $mobileWidth) {
+            padding: 12px 24px;
+        }
+    }
+
+    @media (max-width: $mobileWidth) {
+        flex-direction: column;
+        padding: 12px 0;
+    }
+}
