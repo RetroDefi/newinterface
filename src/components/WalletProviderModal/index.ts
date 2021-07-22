@@ -1,3 +1,2 @@
-import WalletProviderModal from "./WalletProviderModal";
-
-export default WalletProviderModal;
+export * from "./WalletProviderModal";
+export { default } from "./WalletProviderModal";

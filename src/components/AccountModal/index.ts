@@ -1,3 +1,2 @@
-import AccountModal from "./AccountModal";
-
-export default AccountModal;
+export * from "./AccountModal";
+export { default } from "./AccountModal";

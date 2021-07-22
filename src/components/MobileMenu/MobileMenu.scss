@@ -26,7 +26,10 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--popup-container-background);
+    pointer-events: auto;
+    user-select: auto;
+    backdrop-filter: var(--popup-container-backdrop);
 }
 
 .mobile-menu {
@@ -67,15 +70,20 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: $white;
+        color: var(--c-txt-2);
         font-size: 18px;
         font-weight: 600;
         letter-spacing: 2px;
         padding: $spacing3 $spacing4;
         text-decoration: none;
 
+        &:hover {
+            color: var(--c-txt);
+        }
+
         &.active {
-            color: $bunnyDark;
+            color: var(--c-primary);
+            text-shadow: var(--t-shadow-1);
         }
     }
 

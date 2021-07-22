@@ -1,4 +1,4 @@
-import tokenBUNNY from "./token-bunny.svg";
+import tokenBUNNY from "./qbertpxl.png";
 import tokenUSDT from "./token-usdt.svg";
 import tokenWBTC from "./token-wbtc.svg";
 import tokenETH from "./token-eth.svg";

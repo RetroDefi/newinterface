@@ -35,8 +35,8 @@
     }
 
     &.primary {
-        color: $white;
-        background-color: $bunnyDark;
+        color: #000;
+        background-color: var(--c-primary);
     }
 
     &.secondary {

@@ -64,17 +64,21 @@
     align-items: center;
 
     > .item {
+        color: var(--c-txt-2);
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        -webkit-box-align: center;
         align-items: center;
-        color: $grey400;
-        font-size: 16px;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        justify-content: center;
         font-weight: 700;
         letter-spacing: 2px;
-        padding-left: $spacing4;
-        padding-right: $spacing4;
+        padding-left: 12px;
+        padding-right: 12px;
         text-decoration: none;
+        cursor: pointer;
+        margin-top: 0px;
+        font-size: 16px;
 
         > .decoration {
             width: 120%;
@@ -84,11 +88,12 @@
         }
 
         &:hover {
-            color: $grey200;
+            color: var(--c-txt);
         }
 
         &.active {
-            color: $bunnyDark;
+            color: var(--c-primary);
+            text-shadow: var(--t-shadow-1);
         }
 
         @media (max-width: $mobileWidth) {

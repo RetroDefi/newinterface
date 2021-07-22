@@ -48,7 +48,7 @@ const Farms: React.FC = () => {
           {/*    <span className='description'>Monthly Profits to<br/>$BUNNY lovers</span>*/}
           {/*</div>*/}
         </div>
-        <div className="partners">
+        {/*<div className="partners">
           <div className="social-group">
             <img
               className="icon clickable no-select"
@@ -71,7 +71,7 @@ const Farms: React.FC = () => {
               onClick={() => window.open(PARTNERS_LINK.twitter, "_blank")}
             />
           </div>
-        </div>
+              </div>*/}
       </div>
     );
   };
@@ -80,7 +80,7 @@ const Farms: React.FC = () => {
     return (
       <>
         <Route exact path={path}>
-          <PageHeader title="HELLO Polygon! Welcome to Retrofarm!">
+          <PageHeader title="RetroDEFI QBERT Optimized Farms">
             {getHeaderDescription()}
           </PageHeader>
           <Suspense fallback={<LocalLoader />}>
