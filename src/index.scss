@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900|Yellowtail);
 @import './theme.scss';
 
 html {
@@ -7,7 +7,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Ubuntu', 'Roboto', sans-serif;
+  font-family: 'Orbitron';
   font-size: 16px;
   color: $grey500;
   line-height: 1.4;
@@ -43,7 +43,7 @@ div, span, input {
   height: 100vh;
   background-position: 0 30vh;
   background-repeat: no-repeat;
-  background-image: radial-gradient(50% 50% at 50% 50%, $baseDim 0%, $base 100%);
+  background-image: url(./assets/background/bg-all.jpg);
 }
 
 .no-select {

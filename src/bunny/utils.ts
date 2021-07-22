@@ -15,8 +15,8 @@ import {
 import { TransactionDetails } from "../state/transactions/reducer";
 import ApolloClient from "apollo-client/ApolloClient";
 import { NormalizedCacheObject } from "apollo-cache-inmemory";
-//import { GET_BLOCKS } from '../apollo/queries'
-//import { polygonBlockClient } from '../apollo/client'
+//import { GET_BLOCKS } from "../apollo/queries";
+import { polygonBlockClient } from "../apollo/client";
 import { ChainId, polyRPC } from "../connections/connectors";
 import Bunny from "./Bunny";
 import {

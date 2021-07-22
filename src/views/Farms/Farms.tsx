@@ -35,7 +35,9 @@ const Farms: React.FC = () => {
                 false
               )}
             </span>
-            <span className="description">Total Deposited Value at Bunny</span>
+            <span className="description">
+              Total Deposited Value at RetroFarms
+            </span>
           </div>
           {/*<div className='stat mcap'>*/}
           {/*    <span className='value'>${addComma(mcapData.toFixed(0))}</span>*/}
@@ -78,7 +80,7 @@ const Farms: React.FC = () => {
     return (
       <>
         <Route exact path={path}>
-          <PageHeader title="HELLO Polygon! Welcome to PancakeBunny!">
+          <PageHeader title="HELLO Polygon! Welcome to Retrofarm!">
             {getHeaderDescription()}
           </PageHeader>
           <Suspense fallback={<LocalLoader />}>

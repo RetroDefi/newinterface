@@ -1,3 +1,2 @@
-import Farms from "./Farms";
-
-export default Farms;
+export { default } from "./Farms";
+export * from "./Farms";
