@@ -24,10 +24,12 @@ import TransactionUpdater from "./state/transactions/updater";
 import Web3SideProvider from "./contexts/Web3SideProvider";
 import DataProvider from "./contexts/DataProvider";
 import store from "./state";
+import Background from "./body/background";
+import BgImg from "./assets/background/bg-all.jpg";
 
 const TopBar = lazy(() => import("./components/TopBar"));
 const MobileMenu = lazy(() => import("./components/MobileMenu"));
-const Farms = lazy(() => import("./views/Farms"));
+const Earn = lazy(() => import("./views/Farms"));
 const Zap = lazy(() => import("./views/Zap"));
 
 const Web3ProviderNetwork = createWeb3ReactRoot(NetworkContextName);
@@ -75,33 +77,38 @@ const App: React.FC = () => {
   ]);
 
   return (
-    <Providers>
-      <Suspense fallback={<div />}>
-        <Router>
-          <TopAlert />
-          <TopBar onPresentMobileMenu={handlePresentMobileMenu} />
-          <MobileMenu
-            onDismiss={handleDismissMobileMenu}
-            visible={mobileMenu}
-          />
+    <div className="app-background">
+      <div className="App">
+        <main className="app preload">
+          <Background />
+          <Providers>
+            <Suspense fallback={<div />}>
+              <Router>
+                <TopAlert />
+                <TopBar onPresentMobileMenu={handlePresentMobileMenu} />
+                <MobileMenu
+                  onDismiss={handleDismissMobileMenu}
+                  visible={mobileMenu}
+                />
 
-          <Switch>
-            {/*<Route path='/presale' component={Auction}/>*/}
-            <Route path="/zap" component={Zap} />
-            <Route path="/pool" component={Farms} />
+                <Switch>
+                  {/*<Route path='/presale' component={Auction}/>*/}
+                  <Route path="/zap" component={Zap} />
+                  <Route path="/earn" component={Earn} />
 
-            <Route path="*">
-              <Redirect to="/pool" />
-            </Route>
-          </Switch>
-        </Router>
-      </Suspense>
+                  <Route path="*">
+                    <Redirect to="/earn" />
+                  </Route>
+                </Switch>
+              </Router>
+            </Suspense>
 
-      <Popups />
-      <SingletonHooksContainer />
-
-      <div className="app-background" />
-    </Providers>
+            <Popups />
+            <SingletonHooksContainer />
+          </Providers>
+        </main>
+      </div>
+    </div>
   );
 };
 

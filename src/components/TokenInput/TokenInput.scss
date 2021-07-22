@@ -1,0 +1,76 @@
+@import '../../theme.scss';
+
+.token-input-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: $borderRadius;
+    background-color: $grey900;
+
+    > input {
+        min-width: 0;
+        width: 100%;
+        flex: 1;
+        margin: 0;
+        padding: 6px 20px;
+        background: none;
+        outline: none;
+        border: 0;
+        font-size: 24px;
+        font-family: 'Ubuntu', 'Roboto', sans-serif;
+        text-align: right;
+        color: $white;
+
+        @media (max-width: $mobileWidth) {
+            padding: 6px 10px;
+        }
+    }
+
+    > input.token-input::placeholder {
+        color: $grey500;
+        opacity: 1;
+    }
+
+    > .token-input-symbol {
+        color: $grey500;
+        text-align: right;
+        font-size: 20px;
+
+        @media (max-width: $mobileWidth) {
+            max-width: 35%;
+            font-size: 14px;
+        }
+    }
+
+    > .token-input-max {
+        padding: 8px 15px;
+        border-radius: $borderRadius;
+        background-color: $grey800;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        color: $grey200;
+        margin: 0 8px 0 20px;
+
+        &.hide-symbol {
+            margin: 0 8px 0 0;
+        }
+
+        &:hover {
+            background-color: $grey500;
+        }
+
+        @media (max-width: $mobileWidth) {
+            margin: 0 8px 0 8px;
+        }
+    }
+
+    > .to {
+        font-size: 14px;
+        font-weight: 600;
+        padding-left: 12px;
+        color: $grey400;
+    }
+}

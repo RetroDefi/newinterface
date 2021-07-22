@@ -1,0 +1,29 @@
+@import '../../theme.scss';
+
+.back-button {
+    height: 42px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: $borderRadius;
+    color: $white;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    box-shadow: none;
+    padding: 0 $spacing3;
+
+    &:hover {
+        background-color: $grey900;
+    }
+
+    > .arrow {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        object-fit: contain;
+    }
+}

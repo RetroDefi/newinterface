@@ -1,0 +1,61 @@
+@import '../../theme';
+
+.token-select-wrapper {
+    width: 100%;
+    min-height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: $borderRadius;
+    background-color: $grey800;
+    padding: 0 8px;
+
+    &:hover {
+        background-color: $grey600;
+    }
+
+    > .token-select-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        > .token-select-icons {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+            > img {
+                width: 28px;
+                height: 28px;
+            }
+        }
+
+        > .token-select-symbol {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 8px;
+            color: white;
+        }
+
+        > .token-select-virtual-divider {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 8px 0 4px;
+            color: white;
+        }
+
+        > .token-select-placeholder {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0 8px;
+            color: white;
+        }
+    }
+
+    > .token-select-arrow {
+        margin: 0 6px 0 4px;
+    }
+}

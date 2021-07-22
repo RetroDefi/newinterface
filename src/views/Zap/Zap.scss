@@ -1,0 +1,189 @@
+@import '../../theme.scss';
+
+.zap-wrapper {
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+
+    @media (max-width: $mobileWidth) {
+        width: 100%;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+}
+
+.zap-control-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+    color: $grey400;
+}
+
+.zap-control-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0 15px;
+    padding: 0 36px;
+
+    @media (max-width: $mobileWidth) {
+        padding: 0 4px;
+    }
+}
+
+.zap-control-input-wrapper {
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    @media (max-width: $mobileWidth) {
+        padding: 20px 28px 20px;
+    }
+
+    > .token-select {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        > .wallet-register {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-width: 44px;
+            min-height: 40px;
+            border-radius: $borderRadius;
+            margin-left: 8px;
+            background-color: $grey800;
+
+            &:hover {
+                background-color: $grey600;
+            }
+        }
+    }
+
+    > .token-input {
+        width: 100%;
+        margin: 10px 0 2px;
+    }
+
+    > .balance {
+        align-self: flex-end;
+        margin-right: 4px;
+
+        > .label {
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            color: $grey400;
+            font-weight: 700;
+        }
+
+        > .value {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-align: right;
+            color: $grey400;
+            margin-left: 10px;
+        }
+    }
+}
+
+.zap-control-action-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    padding: 0 50px;
+    margin: 15px 0 45px;
+
+    @media (max-width: $mobileWidth) {
+        padding: 0 28px;
+    }
+}
+
+.zap-direction-arrow {
+    align-self: center;
+}
+
+.slippage-alert {
+    padding: $spacing3 0;
+    color: $mint;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-align: center;
+}
+
+.zap-container {
+    > .selector {
+        width: 100%;
+        max-width: 420px;
+        height: 52px;
+        display: grid;
+        justify-content: stretch;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        margin: $spacing2 0;
+        padding: $spacing0;
+        background-color: $bunnyDim;
+        border-radius: $borderRadius;
+
+        @media (max-width: $mobileWidth) {
+            width: 100%;
+        }
+
+        > .item {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: $grey300;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding-left: $spacing4;
+            padding-right: $spacing4;
+            border-radius: $borderRadius;
+
+            &:hover {
+                color: $grey100;
+            }
+
+            &.active {
+                background-color: $bunnyDark;
+                color: $white;
+            }
+
+            &.left {
+                box-shadow: 10px 0 10px 0 rgba(0, 0, 0, 0.2);
+            }
+
+            &.right {
+                box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.2);
+            }
+
+            @media (max-width: $mobileWidth) {
+                padding-left: $spacing2;
+                padding-right: $spacing2;
+            }
+        }
+    }
+}

@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900|Yellowtail);
+@import "./main.css";
 @import './theme.scss';
 
 html {
@@ -43,7 +44,7 @@ div, span, input {
   height: 100vh;
   background-position: 0 30vh;
   background-repeat: no-repeat;
-  background-image: url(./assets/background/bg-all.jpg);
+  //background-image: url(assets/background/bg-all.jpg);
 }
 
 .no-select {
