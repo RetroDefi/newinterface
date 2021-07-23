@@ -13,6 +13,7 @@
     "@ethersproject/providers": "5.4.1",
     "@pancakeswap-libs/uikit": "0.29.4",
     "@reduxjs/toolkit": "1.6.1",
+    "@types/node-sass": "4.11.2",
     "@types/react-router-dom": "5.1.8",
     "@web3-react/core": "6.1.9",
     "@web3-react/injected-connector": "6.0.7",
