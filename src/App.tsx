@@ -24,7 +24,7 @@ import TransactionUpdater from "./state/transactions/updater";
 import Web3SideProvider from "./contexts/Web3SideProvider";
 import DataProvider from "./contexts/DataProvider";
 import store from "./state";
-import Background from "./body/background";
+//import Background from "./body/background";
 import BgImg from "./assets/background/bg-all.jpg";
 
 const TopBar = lazy(() => import("./components/TopBar"));
@@ -77,38 +77,46 @@ const App: React.FC = () => {
   ]);
 
   return (
-    <div className="app-background">
-      <div className="App">
-        <main className="app preload">
-          <Background />
-          <Providers>
-            <Suspense fallback={<div />}>
-              <Router>
-                <TopAlert />
-                <TopBar onPresentMobileMenu={handlePresentMobileMenu} />
-                <MobileMenu
-                  onDismiss={handleDismissMobileMenu}
-                  visible={mobileMenu}
-                />
+    <Providers>
+      <Suspense fallback={<div />}>
+        <Router>
+          <TopAlert />
+          <TopBar onPresentMobileMenu={handlePresentMobileMenu} />
+          <MobileMenu
+            onDismiss={handleDismissMobileMenu}
+            visible={mobileMenu}
+          />
 
-                <Switch>
-                  {/*<Route path='/presale' component={Auction}/>*/}
-                  <Route path="/zap" component={Zap} />
-                  <Route path="/earn" component={Earn} />
+          <Switch>
+            {/*<Route path='/presale' component={Auction}/>*/}
+            <Route path="/zap" component={Zap} />
+            <Route path="/earn" component={Earn} />
 
-                  <Route path="*">
-                    <Redirect to="/earn" />
-                  </Route>
-                </Switch>
-              </Router>
-            </Suspense>
+            <Route path="*">
+              <Redirect to="/earn" />
+            </Route>
+          </Switch>
+        </Router>
+      </Suspense>
 
-            <Popups />
-            <SingletonHooksContainer />
-          </Providers>
-        </main>
+      <Popups />
+      <SingletonHooksContainer />
+      <div className="app-background">
+        <img
+          src={BgImg}
+          style={{
+            position: "absolute",
+            display: "block",
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            background: "0px 0px",
+            zIndex: 1,
+            opacity: "0.6"
+          }}
+        />
       </div>
-    </div>
+    </Providers>
   );
 };
 
