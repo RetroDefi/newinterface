@@ -1,3 +1,4 @@
+import React from "react";
 import BackgroundImg from "../assets/background/bg-all.jpg";
 //import Canvas from "./canvas";
 export default function App() {
