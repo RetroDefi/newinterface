@@ -2,13 +2,16 @@
 
 .container {
     width: 100%;
-    max-width: $siteWidth;
     margin: 0 auto;
-    padding: 0 $spacing4;
+    padding: 0 24px;
     box-sizing: border-box;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: column;
     flex-direction: column;
+    -webkit-justify-content: flex-start;
     justify-content: flex-start;
+    -webkit-align-items: center;
     align-items: center;
 
     &.lg {

@@ -6,7 +6,8 @@
     height: $topBarSize;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
     align-items: center;
 
     > .logo-wrapper {
